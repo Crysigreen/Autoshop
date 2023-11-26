@@ -3,6 +3,7 @@
     public class Model : BaseEntity
     {
         public string Name { get; set; }
+        public Guid BrandId { get; set; }
         public Brand Brand { get; set; }
         public string ImageUrl { get; set; }
         public int StartYear { get; set; }
@@ -10,10 +11,10 @@
         public Categorys Category { get; set; }
 
 
-        public Model(string name, Brand brand, string imageUrl, int startYear, int endYear, Categorys category)
+        public Model(string name, Guid brandId, string imageUrl, int startYear, int endYear, Categorys category)
         {
             this.Name = name;
-            this.Brand = brand;
+            this.BrandId = brandId;
             this.ImageUrl = imageUrl;
             this.StartYear = startYear;
             this.EndYear = endYear;

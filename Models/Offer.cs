@@ -7,18 +7,20 @@
         public int Mileage { get; set;}
         public decimal Price { get; set;}
         public int Year { get; set;}
+        public Guid ModelId { get; set;}
         public Model Model { get; set;}
+        public Guid UserId { get; set;}
         public User User { get; set;}
 
-        public Offer(string description, string imageUrl, int mileage, decimal price, int year, Model model, User user)
+        public Offer(string description, string imageUrl, int mileage, decimal price, int year, Guid modelId, Guid userId)
         {
             this.Description = description;
             this.ImageUrl = imageUrl;
             this.Mileage = mileage;
             this.Price = price;
             this.Year = year;
-            this.Model = model;
-            this.User = user;
+            this.ModelId = modelId;
+            this.UserId = userId;
         }
     }
 }

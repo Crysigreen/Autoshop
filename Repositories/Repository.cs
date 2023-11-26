@@ -72,12 +72,12 @@ namespace Autoshop.Repositories
 
         public T Get(Guid id)
         {
-
-            var toGet = _context.Set<T>().FirstOrDefault(m => m.Id == id);
+            var toGet = _context.Set<T>().Find(id);
+            //var toGet = _context.Set<T>().FirstOrDefault(m => m.Id == id);
             if (toGet != null)
             {
                 return toGet;
-            }
+            }+
             return null;
         }
 

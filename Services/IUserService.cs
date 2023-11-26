@@ -1,7 +1,7 @@
 ﻿namespace Autoshop.Services
 {
-    public interface IUserService
+    public interface IUserService<T> where T : class
     {
-       public void AddUser();
+       public Task<T> AddUserAsync(T user);
     }
 }
