@@ -2,14 +2,26 @@
 {
     public class User : BaseEntity
     {
-        private string Username { get; set;}
-        private string Password { get; set;}
-        private string FirstName { get; set;}
-        private string LastName { get; set;}
-        private string Email { get; set;}
-        private string Phone { get; set;}
-        private bool isActive { get; set;}
-        private bool isAdmin { get;}
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public bool IsActive { get; set; }
+        public bool IsAdmin { get; set; }
+
+        public User(string username, string password, string firstName, string lastName, string email, string phone, bool IsActive, bool IsAdmin)
+        {
+            this.Username = username;
+            this.Password = password;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.Phone = phone;
+            this.IsActive = IsActive;
+            this.IsAdmin = IsAdmin;
+        }
 
     }
 }

@@ -1,8 +1,15 @@
 ﻿namespace Autoshop.Models
 {
-    public class Brands : BaseEntity
+    public class Brand : BaseEntity
     {
-        private string name { get; set;}
+        public string? Name { get; set;}
 
+        public Brand(string? name)
+        {
+            this.Name = name;
+        }
     }
+
+    
 }
+

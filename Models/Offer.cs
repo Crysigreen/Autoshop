@@ -2,12 +2,23 @@
 {
     public class Offer : BaseEntity
     {
-        private string Description { get; set;}
-        private string ImageUrl { get; set;}
-        private int Mileage { get; set;}
-        private decimal Price { get; set;}
-        private int Year { get; set;}
-        private Model Model { get; set;}
-        private User User { get; set;}
+        public string Description { get; set;}
+        public string ImageUrl { get; set;}
+        public int Mileage { get; set;}
+        public decimal Price { get; set;}
+        public int Year { get; set;}
+        public Model Model { get; set;}
+        public User User { get; set;}
+
+        public Offer(string description, string imageUrl, int mileage, decimal price, int year, Model model, User user)
+        {
+            this.Description = description;
+            this.ImageUrl = imageUrl;
+            this.Mileage = mileage;
+            this.Price = price;
+            this.Year = year;
+            this.Model = model;
+            this.User = user;
+        }
     }
 }
